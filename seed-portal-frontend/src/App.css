@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.app-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.app-container h1 {
+  color: #003366; /* UC Davis navy blue */
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+}
