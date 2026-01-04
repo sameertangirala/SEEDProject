@@ -21,7 +21,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'links',
-    'django_cas_ng',
     'whitenoise',
 ]
 
@@ -113,13 +112,4 @@ if not DEBUG:
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'django_cas_ng.backends.CASBackend',
 )
-
-CAS_SERVER_URL = config('CAS_SERVER_URL', default='https://cas.ucdavis.edu/cas/')
-CAS_VERSION = config('CAS_VERSION', default='3')
-CAS_REDIRECT_URL = config('CAS_REDIRECT_URL', default='/')
-CAS_LOGOUT_COMPLETELY = config('CAS_LOGOUT_COMPLETELY', default=True, cast=bool)
-CAS_LOGOUT_REDIRECT_URL = config('CAS_LOGOUT_REDIRECT_URL', default='/')
-LOGIN_URL = '/accounts/login/'
-LOGOUT_REDIRECT_URL = '/'
