@@ -6,7 +6,8 @@ function App() {
   const [apps, setApps] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/apps/")
+    const apiUrl = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+    fetch(`${apiUrl}/apps/`)
       .then((res) => res.json())
       .then((data) => setApps(data))
       .catch((err) => console.error("Error fetching apps:", err));
